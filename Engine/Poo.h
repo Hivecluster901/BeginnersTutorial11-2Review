@@ -13,6 +13,8 @@ public:
     bool IsEaten() const;//getter
 
 private:
+    const int right = x + width;
+    const int bottom = y + height;
     int x;
     int y;
     int vx;

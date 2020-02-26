@@ -42,13 +42,7 @@ void Poo::Update()
 
 void Poo::Processconsumption(const Dude &dude)//Const correctness(we are only reading the dude not chaing it.)
 {
-    const int right0 = dude.x + dude.width;
-    const int bottom0 = dude.y + dude.height;
-    const int right1 = x + width;
-    const int bottom1 = y + height;
-
-    
-    if (right0 >= x && dude.x <= right1 && bottom0 >= y && dude.y <= bottom1)
+    if (dude.Compare(x, y, right, bottom))
     {
         isEaten = true;
     }
